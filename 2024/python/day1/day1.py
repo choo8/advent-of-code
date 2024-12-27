@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def parse(filename: str):
+def parse(filename: str) -> tuple[list[str], list[str]]:
     with open(filename, "r") as f:
         lines = f.readlines()
 
@@ -9,7 +9,7 @@ def parse(filename: str):
     return l1, l2
 
 
-def part1():
+def part_1():
     for filename in ["example.txt", "input.txt"]:
         l1, l2 = parse(filename)
 
@@ -21,7 +21,7 @@ def part1():
         print(f"[Part 1] Total distance for {filename}: {total_dist}")
 
 
-def part2():
+def part_2():
     for filename in ["example.txt", "input.txt"]:
         l1, l2 = parse(filename)
 
@@ -33,5 +33,5 @@ def part2():
 
 
 if __name__ == "__main__":
-    part1()
-    part2()
+    part_1()
+    part_2()
